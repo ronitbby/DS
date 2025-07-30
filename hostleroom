@@ -1,0 +1,47 @@
+#include <iostream>
+using namespace std;
+
+class HostelRoom{
+    private:
+    string roomnum;
+    string studentname;
+    string rollnum;
+    int messbalance;
+    bool isoccupied;
+
+    public:
+    HostelRoom(string room){
+        roomnum=room;
+        messbalance=0;
+        isoccupied=false;
+    }
+
+    void allotroom(string name,string roll){
+        if(!isoccupied){
+            studentname=name;
+            rollnum=roll;
+            isoccupied=true;
+            cout << "Room: " << roomnum << "Alloted to" <<name <<endl;
+        }
+        else{
+            cout << "Room already occupied" << endl;
+        }
+    }
+
+    void addMessBalance(int amount){
+        messbalance+=amount;
+        cout << "Mess balance updated" << messbalance <<endl;
+    }
+
+    void showRoomdetails(){
+        cout << "Room details" <<endl;
+        cout <<"Room" << roomnum <<endl;
+        if(isoccupied){
+            cout  << "student" << studentname <<
+        }
+    }
+};
+
+int main(){
+    HostelRoom;
+}
